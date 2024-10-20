@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <title>Home - The Office</title>
+</head>
+<body>
+    <header>
+        <div class="logo"></div>
+        <div class="menu">
+            <ul class="aparentes">
+                <li><a href="produtos.html">HOME</a></li>
+                <li><a href="explore.html">EXPLORE</a></li>
+                <li><a href="produtos.html">CHARACTERS</a></li>
+                <li><a href="produtos.html">SEASONS</a>
+                    <ul class="dropdown"> 
+                        <li><a href="produtos.html">Season 1</a></li>
+                        <li><a href="produtos.html">Season 2</a></li>
+                        <li><a href="produtos.html">Season 3</a></li>
+                        <li><a href="produtos.html">Season 4</a></li>
+                        <li><a href="produtos.html">Season 5</a></li>
+                        <li><a href="produtos.html">Season 6</a></li>
+                        <li><a href="produtos.html">Season 7</a></li>
+                        <li><a href="produtos.html">Season 8</a></li>
+                        <li><a href="produtos.html">Season 9</a></li>
+                    </ul> 
+                </li>
+            </ul>
+            <button onclick="traduzir()">PT/EN</button>
+        </div>
+    </header>
+    <main>
+        <div class="principal">
+            <div class="texto">
+                <h1 id="info">Welcome!</h1>
+                <button id="botao" onclick="alternar()">CLICK HERE</button>
+            </div>
+            <div class="img" id="imagem">
+                
+            </div>
+        </div>
+    </main>
+<script>
+function alternar() {
+    var i = document.getElementById("imagem");
+    var computedStyle = window.getComputedStyle(i);
+    
+    if (computedStyle.backgroundImage.includes('elenco3.avif')) {
+        i.style.backgroundImage = 'url("texto14.png")';
+    } else {
+        i.style.backgroundImage = 'url("elenco3.avif")';
+    }
+}
+
+function traduzir() {
+      var urlAtual = window.location.href; 
+
+      if (urlAtual.includes('index.html')) {
+        window.location.href = 'home.html';
+      } else {
+        window.location.href = 'index.html';
+      }
+    }
+</script>
+</body>
+
+</html>

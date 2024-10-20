@@ -1,0 +1,246 @@
+html, body {
+height: 100%;
+margin: 0;
+padding: 0;
+}
+
+body {
+display: flex;
+flex-direction: column;
+}
+
+header{
+width: 100%;
+height: 80px;
+display: flex;
+}
+
+.logo{
+flex:15%;
+}
+
+
+.menu{
+flex:85%;
+display: flex; justify-content: center; align-items: center;
+}
+
+main{
+background-image: linear-gradient(to right, #1e4c90, #108dc4, #108dc4, #108dc4);
+flex-grow: 1;
+display: flex; align-items: center; justify-content: center;
+border-top: 2px rgb(27, 35, 139) solid;
+border-bottom: 2px rgb(27, 35, 139) solid;
+}
+
+.principal{ 
+width: 1000px;
+height: 350px;
+display: flex;
+}
+
+.texto{
+flex:35%;
+display: flex; flex-direction: column; justify-content: center; align-items: center;
+}
+
+.img{
+flex:65%;
+background-image: url(elenco3.avif); 
+background-size: 100% 100%;
+transition: background-image 0.5s ease; 
+}
+
+.principal h1{
+color: rgb(255, 255, 255); -webkit-text-stroke: 1.5px rgb(27, 35, 139); 
+font-size: 35px; 
+font-family: monospace;
+border-right: 10px solid white;
+width: 15ch;
+white-space: nowrap;
+overflow: hidden;
+animation: typing 2s steps(15), blinking 0.5s infinite step-end alternate;
+}
+
+@keyframes typing{
+from {
+    width: 0;
+}
+}
+
+@keyframes blinking{
+50% {
+    border-color: transparent;
+}
+}
+
+.texto button{
+width: 320px;
+height: 45px;
+background-color: rgb(27, 35, 139);
+border: none;
+color: white; font-family: Arial, Helvetica, sans-serif;
+border-radius: 10px;
+font-size: 17px;
+}
+
+.texto button:hover{
+background-color: white; border: rgb(27, 35, 139) 1px solid;
+color: rgb(27, 35, 139);
+font-weight: bold;
+box-shadow: rgba(3, 5, 110, 0.694) 3px 3px 3px;
+transition: 0.6s ease;
+}
+
+.menu button{
+width: 70px;
+height: 27px;
+font-size: 15px ;
+background-color: rgb(27, 35, 139);
+border: none; border-radius: 5px;
+color: white; font-family: Arial, Helvetica, sans-serif;
+margin-left: 30px;
+}
+
+.menu button:hover{
+background-color: white; border: rgb(27, 35, 139) 1px solid;
+color: rgb(27, 35, 139);
+transition: 0.5s ease;
+}
+
+ul{
+list-style: none;
+}
+
+ul li{
+display: inline-block;
+position: relative;
+
+}
+
+ul li a{
+display: block;
+font-size: 15px;
+margin: 15px 15px;
+text-decoration: none;
+color: rgb(27, 35, 139);
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+background-image: linear-gradient(90deg, #1e4c90, #108dc4);
+background-repeat: no-repeat;
+background-size: 0% 3px;
+background-position: left bottom;
+transition: background-size 500ms ease;
+}
+
+ul li a:hover{
+background-size: 100% 3px;
+}
+
+ul li ul.dropdown{
+padding: 0;
+background-color: #1e4c90;
+position: absolute;
+display: none;
+border-radius: 10px;
+}
+
+ul li:hover ul.dropdown{
+display: block;
+}
+
+ul li ul.dropdown a{
+color: white;
+font-size: 15px;
+background-image: none;
+font-family: monospace;
+}
+
+ul li ul.dropdown li:hover{
+box-shadow: inset 0 0 8px #0c2953;
+}
+
+ul li ul.dropdown li{
+width: 100%;
+border-radius: 10px;
+height: 40px;
+text-align: center; 
+}
+
+footer{
+display: flex;
+height: 80px;
+border-bottom: 2px rgb(27, 35, 139) solid;
+display: flex; text-align: center; justify-content: center; align-items: center;
+}
+
+footer p{
+color: rgb(27, 35, 139);
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-size: 13px;
+}
+
+
+
+@media (max-width: 900px) {
+
+main{
+background-image: linear-gradient(to bottom, #1e4c90, #108dc4, #108dc4, #108dc4);
+}
+
+.principal{
+width: 640px;
+height: 530px;
+flex-direction: column;
+}
+
+.principal h1{
+font-size: 50px;
+margin-top: 0;
+}
+
+.texto button{
+width: 250px;
+height: 40px;
+}
+
+.texto{
+justify-content: flex-start;
+}
+}
+
+@media (max-width: 480px){
+
+header{
+height: 60px;
+}
+
+.principal{
+width: 380px;
+height: 330px;
+}
+
+.principal h1{
+font-size: 35px;
+}
+        
+ul li a{
+font-size: 5px;
+}
+
+.texto button{
+height: 35px;
+font-size: 12px;
+}
+
+.texto{
+flex: 40%;
+}
+
+.img{
+flex: 60%;
+}
+
+footer{
+height: 60px;
+}
+}
